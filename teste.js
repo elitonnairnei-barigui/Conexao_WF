@@ -61,6 +61,7 @@
 			///////////////////////////////////////////////////////////////
 			const tabela = `<script type="text/javascript" src="wp_empresacontrato. js?20266121746281"></script>`
 			console.log('teste Eliton')
+			console.log(tabela)
 			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:

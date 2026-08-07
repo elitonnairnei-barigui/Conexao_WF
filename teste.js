@@ -47,7 +47,8 @@
 		    
 			// 4. Insere a nova <td> no final da <tr>
 		    linha.appendChild(novoTd);
-	
+			
+			///////////////////////////////////////////////////////////
 			const novoEmpresaCNPJ = `<select id="meuSelectCustomizado">
 			        <option value="0" selected="selected">Todas</option>
 			        <option value="7">Teste1</option>
@@ -57,6 +58,10 @@
 			        <option value="1">Teste5</option>
 			    </select>`;
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
+			///////////////////////////////////////////////////////////////
+			const tabela = `<script type="text/javascript" src="wp_empresacontrato. js?20266121746281"></script>`
+			console.log('teste')
+			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:
 		    // novoTd.className = 'minha-classe';

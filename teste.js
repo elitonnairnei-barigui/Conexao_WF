@@ -44,7 +44,7 @@
 	    const novoTd = document.createElement('td');
 	    
 	    // 3. Define o conteúdo que vai dentro dela (pode ser texto ou HTML)
-	    novoTd.innerHTML = '<span>Novo Conteúdo</span>'; 
+	    novoTd.innerHTML = '<span>Empresa CNPJ</span>'; 
 	    
 	    // (Opcional) Adicionar classes ou estilos na nova td:
 	    // novoTd.className = 'minha-classe';

@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Contador de Cliques Simples
-// @namespace    https://github.com/seu-usuario/meus-scripts
+// @name         AjustarJanelaWF
+// @namespace    https://github.com/elitonnairnei-bairgui/meus-interagir_wf-script.user.js
 // @version      1.0.0
 // @description  Adiciona um contador de cliques no canto da página
 // @author       Eliton

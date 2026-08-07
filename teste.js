@@ -44,14 +44,29 @@
 	    const novoTd = document.createElement('td');
 	    
 	    // 3. Define o conteúdo que vai dentro dela (pode ser texto ou HTML)
-	    novoTd.innerHTML = '<span>Empresa CNPJ</span>'; 
+	    novoTd.innerHTML = '<span>Empresa CNPJ Teste</span>'; 
 	    
+		// 4. Insere a nova <td> no final da <tr>
+	    linha.appendChild(novoTd);
+
+		const novoEmpresaCNPJ = `<select id="meuSelectCustomizado">
+		        <option value="0" selected="selected">Todas</option>
+		        <option value="7">AUDI</option>
+		        <option value="237">BYD</option>
+		        <option value="203">CAOA CHERY</option>
+		        <option value="10">CITROEN</option>
+		        <option value="1">FIAT</option>
+		        <option value="14">FORD</option>
+		        <option value="321">FORD INATIVAS</option>
+		        <option value="358">GAC</option>
+		    </select>`;
+		linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
+		
 	    // (Opcional) Adicionar classes ou estilos na nova td:
 	    // novoTd.className = 'minha-classe';
 	    // novoTd.style.backgroundColor = '#4CAF50';
 	
-	    // 4. Insere a nova <td> no final da <tr>
-	    linha.appendChild(novoTd);
+
 	}	
 	
 })();

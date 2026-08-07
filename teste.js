@@ -44,21 +44,18 @@
 	    const novoTd = document.createElement('td');
 	    
 	    // 3. Define o conteúdo que vai dentro dela (pode ser texto ou HTML)
-	    novoTd.innerHTML = '<span>Empresa CNPJ Teste</span>'; 
+	    novoTd.innerHTML = '<span>Empresa CNPJ</span>'; 
 	    
 		// 4. Insere a nova <td> no final da <tr>
 	    linha.appendChild(novoTd);
 
 		const novoEmpresaCNPJ = `<select id="meuSelectCustomizado">
 		        <option value="0" selected="selected">Todas</option>
-		        <option value="7">AUDI</option>
-		        <option value="237">BYD</option>
-		        <option value="203">CAOA CHERY</option>
-		        <option value="10">CITROEN</option>
-		        <option value="1">FIAT</option>
-		        <option value="14">FORD</option>
-		        <option value="321">FORD INATIVAS</option>
-		        <option value="358">GAC</option>
+		        <option value="7">Teste1</option>
+		        <option value="237">Teste2</option>
+		        <option value="203">Teste3</option>
+		        <option value="10">Teste4</option>
+		        <option value="1">Teste5</option>
 		    </select>`;
 		linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 		

@@ -29,8 +29,10 @@
 	//filtro seleção
 	const tela_geral = document.getElementById('gxp0_s');
 	const tela_interna = document.getElementById('gxp0_b');
-	
-	tela_geral.style.width = '2168px';
+
+	if (tela_geral){
+		tela_geral.style.width = '2168px';
+	}
 	
 	const disponivel = document.getElementById('vDISPONIVEL');
 

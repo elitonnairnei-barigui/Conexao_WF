@@ -51,8 +51,8 @@
 		}
 
 		// Aplica inicialmente
-		const cor_selecionado = '#0662a1' //#d7eaf5'
-		const cor_disponivel = '#f9fad4'
+		const cor_selecionado = '#dffade' //#d7eaf5'
+		const cor_disponivel = '#edfafc'
 
 		aplicarCor(selecionado, cor_selecionado);
 		aplicarCor(disponivel, cor_disponivel);

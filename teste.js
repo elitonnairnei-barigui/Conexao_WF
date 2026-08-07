@@ -82,7 +82,8 @@
 			  } catch (error) {
 			    console.error('Erro ao buscar a página:', error);
 			  }
-			}			
+			}
+			buscarTabela()
 			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:

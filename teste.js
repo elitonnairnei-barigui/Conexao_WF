@@ -59,31 +59,44 @@
 			    </select>`;
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 			///////////////////////////////////////////////////////////////
-			console.log('teste Eliton........dddddd')
+			console.log('teste Eliton........aaaaa')
 			async function buscarTabela() {
 			  const url = 'https://wf.grupobarigui.com.br/wp_empresacontrato.aspx';
 			
 			  try {
 			    const response = await fetch(url);
+			
+			    if (!response.ok) {
+			      throw new Error(`Erro na requisição: ${response.status} ${response.statusText}`);
+			    }
+			
 			    const htmlText = await response.text();
 			
 			    // Converte a string HTML obtida em um documento DOM manipulável
 			    const parser = new DOMParser();
 			    const doc = parser.parseFromString(htmlText, 'text/html');
 			
-			    // Captura os dados da primeira tabela encontrada
+			    // Captura os dados de todas as linhas de tabela
 			    const linhas = doc.querySelectorAll('table tr');
-			    const dados = Array.from(linhas).map(linha => {
-			      const colunas = linha.querySelectorAll('td, th');
-			      return Array.from(colunas).map(col => col.innerText.trim());
-			    });
 			
-			    console.log(dados);
+			    const dados = Array.from(linhas)
+			      .map(linha => {
+			        const colunas = linha.querySelectorAll('td, th');
+			        // textContent funciona perfeitamente em documentos fora da árvore DOM
+			        return Array.from(colunas).map(col => col.textContent.replace(/\s+/g, ' ').trim());
+			      })
+			      // Filtra linhas vazias ou sem colunas relevantes
+			      .filter(linha => linha.length > 0 && linha.some(celula => celula !== ''));
+			
+			    console.log('Dados extraídos:', dados);
+			    return dados;
+			
 			  } catch (error) {
 			    console.error('Erro ao buscar a página:', error);
 			  }
 			}
-			buscarTabela()
+			
+			buscarTabela();
 			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:

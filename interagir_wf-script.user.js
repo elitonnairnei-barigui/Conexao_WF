@@ -1,3 +1,14 @@
+// ==UserScript==
+// @name         Contador de Cliques Simples
+// @namespace    https://github.com/seu-usuario/meus-scripts
+// @version      1.0.0
+// @description  Adiciona um contador de cliques no canto da página
+// @author       SeuNome
+// @match        https://example.com/*
+// @downloadURL  https://raw.githubusercontent.com/seu-usuario/meus-scripts/main/contador.user.js
+// @updateURL    https://raw.githubusercontent.com/seu-usuario/meus-scripts/main/contador.user.js
+// @grant        none
+// ==UserScript==
 window.addEventListener('load',function() {
     const disponivel = document.getElementById('vDISPONIVEL');
 

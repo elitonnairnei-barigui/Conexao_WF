@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-	'use strict';
+
     const disponivel = document.getElementById('vDISPONIVEL');
 
     disponivel.style.width = '550px';

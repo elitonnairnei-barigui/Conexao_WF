@@ -1,14 +1,17 @@
 // ==UserScript==
 // @name         AjustarJanelaWF
-// @namespace    https://github.com/elitonnairnei-bairgui/meus-interagir_wf-script.user.js
-// @version      1.0.1
-// @description  Adiciona um contador de cliques no canto da página
+// @namespace    https://github.com/elitonnairnei-barigui/Conexao_WF
+// @version      1.0.0
+// @description  Ajusta o tamanho das janelas e aplica cores personalizadas na interface do sistema WF
 // @author       Eliton
 // @match        https://wf.grupobarigui.com.br/*
 // @downloadURL  https://raw.githubusercontent.com/elitonnairnei-barigui/Conexao_WF/main/interagir_wf-script.user.js
 // @updateURL    https://raw.githubusercontent.com/elitonnairnei-barigui/Conexao_WF/main/interagir_wf-script.user.js
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=grupobarigui.com.br
 // @grant        none
-// ==UserScript==
+// @run-at       document-idle
+// ==/UserScript==
+
 window.addEventListener('load',function() {
 	'use strict';
     const disponivel = document.getElementById('vDISPONIVEL');

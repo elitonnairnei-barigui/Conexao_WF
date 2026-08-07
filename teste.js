@@ -17,10 +17,6 @@
     // 2. Personaliza o cabeçalho
     const cor_cabecalho = document.getElementById('ext-comp-1002');
     if (cor_cabecalho) {
-        cor_cabecalho.style.height = '34px';
-        cor_cabecalho.style.left = '0px';
-        cor_cabecalho.style.top = '0px';
-        cor_cabecalho.style.width = '301px';
         cor_cabecalho.style.backgroundColor = '#4CAF50';
     }
 

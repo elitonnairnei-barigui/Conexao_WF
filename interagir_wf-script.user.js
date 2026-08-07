@@ -10,6 +10,7 @@
 // @grant        none
 // ==UserScript==
 window.addEventListener('load',function() {
+	'use strict';
     const disponivel = document.getElementById('vDISPONIVEL');
 
     disponivel.style.width = '550px';

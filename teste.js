@@ -59,9 +59,30 @@
 			    </select>`;
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 			///////////////////////////////////////////////////////////////
-			const tabela = '<https://wf.grupobarigui.com.br/wp_empresacontrato.aspx>'
 			console.log('teste Eliton........')
-			console.log(tabela)
+			async function buscarTabela() {
+			  const url = 'https://wf.grupobarigui.com.br/wp_empresacontrato.aspx';
+			
+			  try {
+			    const response = await fetch(url);
+			    const htmlText = await response.text();
+			
+			    // Converte a string HTML obtida em um documento DOM manipulável
+			    const parser = new DOMParser();
+			    const doc = parser.parseFromString(htmlText, 'text/html');
+			
+			    // Captura os dados da primeira tabela encontrada
+			    const linhas = doc.querySelectorAll('table tr');
+			    const dados = Array.from(linhas).map(linha => {
+			      const colunas = linha.querySelectorAll('td, th');
+			      return Array.from(colunas).map(col => col.innerText.trim());
+			    });
+			
+			    console.log(dados);
+			  } catch (error) {
+			    console.error('Erro ao buscar a página:', error);
+			  }
+			}			
 			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:

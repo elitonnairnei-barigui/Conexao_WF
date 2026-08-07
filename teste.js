@@ -35,6 +35,23 @@
 		observer.observe(selecionado, { childList: true, subtree: true });
 	}
 
-
+/////////////////////////////////////////
+// 1. Localiza a linha (tr) dentro da tabela TABLEEMPRESAMARCA
+	const linha = document.querySelector('#TABLEEMPRESAMARCA tr');
+	
+	if (linha) {
+	    // 2. Cria a nova célula <td>
+	    const novoTd = document.createElement('td');
+	    
+	    // 3. Define o conteúdo que vai dentro dela (pode ser texto ou HTML)
+	    novoTd.innerHTML = '<span>Novo Conteúdo</span>'; 
+	    
+	    // (Opcional) Adicionar classes ou estilos na nova td:
+	    // novoTd.className = 'minha-classe';
+	    // novoTd.style.backgroundColor = '#4CAF50';
+	
+	    // 4. Insere a nova <td> no final da <tr>
+	    linha.appendChild(novoTd);
+	}	
 	
 })();

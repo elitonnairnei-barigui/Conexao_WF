@@ -6,7 +6,7 @@
 		function f_cor_cabecalho(){
 			cor_cabecalho.style.backgroundColor = '#4CAF50';
 		}
-		cor_cabecalho()
+		f_cor_cabecalho()
 		const m_cabecalho = new MutationObserver(function(mutations) {
 			f_cor_cabecalho();
 		});

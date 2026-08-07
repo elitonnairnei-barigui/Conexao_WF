@@ -59,8 +59,9 @@
 			    </select>`;
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 			///////////////////////////////////////////////////////////////
-			console.log('teste Eliton........nnnn')
+			console.log('teste Eliton........ff')
 			function buscarTabela() {
+				console.log('buscarTabela................')
 			  const url = 'https://wf.grupobarigui.com.br/wp_empresacontrato.aspx';
 			
 			  GM_xmlhttpRequest({

@@ -27,6 +27,19 @@
 	}	
 	
 	//filtro seleção
+	const tela_geral = document.getElementById('gxp0_s');
+	const tela_interna = document.getElementById('gxp0_b');
+	
+	if (tela_geral){
+		function redim(tela_geral){
+			tela_geral.style.width = '1168px'
+		}
+		redim();
+		const observer_tela = new MutationObserver(function(mutations) {
+			redim(selecionado);
+		});
+		
+	}
 	const disponivel = document.getElementById('vDISPONIVEL');
 
     disponivel.style.width = '550px';

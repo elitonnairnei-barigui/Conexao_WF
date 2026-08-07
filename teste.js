@@ -1,38 +1,5 @@
 (function() {
     'use strict';
-	//Cabeçalho
-	const cor_cabecalho = document.getElementById('ext-comp-1002');
-	if (cor_cabecalho) {
-		function f_cor_cabecalho(){
-			cor_cabecalho.style.backgroundColor = '#4CAF50';
-		}
-		f_cor_cabecalho()
-		const m_cabecalho = new MutationObserver(function(mutations) {
-			f_cor_cabecalho();
-		});
-
-		m_cabecalho.observe(cor_cabecalho, { characterData: true });		
-	}
-	
-	//Tela inicial
-	const tela_inicial = document.getElementById('W0038TABLEFILTRO');
-	if (tela_inicial) {
-		function cor(){
-			tela_inicial.style.backgroundColor += '#4CAF50';
-			for (const filho of tela_inicial.children){
-				//filho.style.backgroundColor += '#4CAF50';
-				filho.style.cssText += 'background-color: #4CAF50 !important;';
-			}
-		}
-
-		cor()
-
-		const m_telainicial = new MutationObserver(function(mutations) {
-			cor();
-		});
-
-		m_telainicial.observe(tela_inicial, { childList: true, subtree: true });
-	}
 
 	//Filtro Seleção
     const disponivel = document.getElementById('vDISPONIVEL');

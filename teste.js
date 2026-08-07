@@ -60,7 +60,7 @@
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 			///////////////////////////////////////////////////////////////
 			const tabela = `<script type="text/javascript" src="wp_empresacontrato. js?20266121746281"></script>`
-			console.log('teste')
+			console.log('teste Eliton')
 			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:

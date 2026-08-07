@@ -32,7 +32,7 @@
 	
 	if (tela_geral){
 		function redim(tela_geral){
-			tela_geral.style.width = '2168px'
+			tela_geral.style.width = '2168px';
 		}
 		redim();
 		const observer_tela = new MutationObserver(function(mutations) {

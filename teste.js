@@ -59,43 +59,42 @@
 			    </select>`;
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 			///////////////////////////////////////////////////////////////
-			console.log('teste Eliton........aaaaa')
-			async function buscarTabela() {
+			console.log('teste Eliton........nnnn')
+			function buscarTabela() {
 			  const url = 'https://wf.grupobarigui.com.br/wp_empresacontrato.aspx';
 			
-			  try {
-			    const response = await fetch(url);
+			  GM_xmlhttpRequest({
+			    method: "GET",
+			    url: url,
+			    onload: function (response) {
+			      if (response.status >= 200 && response.status < 300) {
+			        const htmlText = response.responseText;
 			
-			    if (!response.ok) {
-			      throw new Error(`Erro na requisição: ${response.status} ${response.statusText}`);
+			        // Parse do HTML retornado
+			        const parser = new DOMParser();
+			        const doc = parser.parseFromString(htmlText, 'text/html');
+			
+			        // Extração dos dados da tabela
+			        const linhas = doc.querySelectorAll('table tr');
+			        const dados = Array.from(linhas)
+			          .map(linha => {
+			            const colunas = linha.querySelectorAll('td, th');
+			            return Array.from(colunas).map(col => col.textContent.replace(/\s+/g, ' ').trim());
+			          })
+			          .filter(linha => linha.length > 0 && linha.some(celula => celula !== ''));
+			
+			        console.log('✅ Dados extraídos via Userscript sem CORS:', dados);
+			      } else {
+			        console.error('❌ Erro na resposta HTTP:', response.status, response.statusText);
+			      }
+			    },
+			    onerror: function (err) {
+			      console.error('❌ Erro de rede ao buscar a tabela:', err);
 			    }
-			
-			    const htmlText = await response.text();
-			
-			    // Converte a string HTML obtida em um documento DOM manipulável
-			    const parser = new DOMParser();
-			    const doc = parser.parseFromString(htmlText, 'text/html');
-			
-			    // Captura os dados de todas as linhas de tabela
-			    const linhas = doc.querySelectorAll('table tr');
-			
-			    const dados = Array.from(linhas)
-			      .map(linha => {
-			        const colunas = linha.querySelectorAll('td, th');
-			        // textContent funciona perfeitamente em documentos fora da árvore DOM
-			        return Array.from(colunas).map(col => col.textContent.replace(/\s+/g, ' ').trim());
-			      })
-			      // Filtra linhas vazias ou sem colunas relevantes
-			      .filter(linha => linha.length > 0 && linha.some(celula => celula !== ''));
-			
-			    console.log('Dados extraídos:', dados);
-			    return dados;
-			
-			  } catch (error) {
-			    console.error('Erro ao buscar a página:', error);
-			  }
+			  });
 			}
 			
+			// Chame a função após o carregamento seguro da página
 			buscarTabela();
 			//linha.insertAdjacentHTM(
 			

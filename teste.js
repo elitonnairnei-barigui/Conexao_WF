@@ -36,10 +36,11 @@
 		}
 		redim();
 		const observer_tela = new MutationObserver(function(mutations) {
-			redim(selecionado);
+			redim(tela_geral);
 		});
-		
+		observer.observe(tela_geral, { childList: true, subtree: true });
 	}
+	
 	const disponivel = document.getElementById('vDISPONIVEL');
 
     disponivel.style.width = '550px';

@@ -95,7 +95,7 @@
 			}
 			
 			// Chame a função após o carregamento seguro da página
-			buscarTabela();
+			//buscarTabela();
 			//linha.insertAdjacentHTM(
 			
 		    // (Opcional) Adicionar classes ou estilos na nova td:

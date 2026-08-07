@@ -1,31 +1,19 @@
 (function() {
     'use strict';
-
-    const disponivel = document.getElementById('vDISPONIVEL');
-	const tela_selecao = document.getElementById('gxp0_c');
-	
-    disponivel.style.width = '550px';
-	disponivel.style.height = '400px';
-
-	const selecionado = document.getElementById('vSELECIONADO');
-
-    selecionado.style.width = '550px';
-	selecionado.style.height = '400px';
-
+	//Cabeçalho
 	const cor_cabecalho = document.getElementById('ext-comp-1002');
 	if (cor_cabecalho) {
-		cor_cabecalho.style.height = '34px';
-		cor_cabecalho.style.left = '0px';
-		cor_cabecalho.style.top = '0px';
-		cor_cabecalho.style.width = '301px';
 		cor_cabecalho.style.backgroundColor = '#4CAF50';
-	}
+		
+		const m_cabecalho = new MutationObserver(function(mutations) {
+			cor();
+		});
 
+		m_cabecalho.observe(cor_cabecalho, { characterData: true });		
+	}
+	
+	//Tela inicial
 	const tela_inicial = document.getElementById('W0038TABLEFILTRO');
-
-	if (tela_selecao){
-		tela_selecao.style.width = '2000px';
-	}
 	if (tela_inicial) {
 		function cor(){
 			tela_inicial.style.backgroundColor += '#4CAF50';
@@ -37,12 +25,21 @@
 
 		cor()
 
-		const c = new MutationObserver(function(mutations) {
+		const m_telainicial = new MutationObserver(function(mutations) {
 			cor();
 		});
 
-		c.observe(tela_inicial, { childList: true, subtree: true });
+		m_telainicial.observe(tela_inicial, { childList: true, subtree: true });
 	}
+
+	//Filtro Seleção
+    const disponivel = document.getElementById('vDISPONIVEL');
+    disponivel.style.width = '550px';
+	disponivel.style.height = '400px';
+
+	const selecionado = document.getElementById('vSELECIONADO');
+    selecionado.style.width = '550px';
+	selecionado.style.height = '400px';
 
 	if (selecionado) {
 		function aplicarCor(elemento, cor) {
@@ -68,4 +65,7 @@
 		// Configura para observar a inclusão/remoção de elementos filhos
 		observer.observe(selecionado, { childList: true, subtree: true });
 	}
+
+
+	
 })();

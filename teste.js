@@ -3,10 +3,12 @@
 	//Cabeçalho
 	const cor_cabecalho = document.getElementById('ext-comp-1002');
 	if (cor_cabecalho) {
-		cor_cabecalho.style.backgroundColor = '#4CAF50';
-		
-		const m_cabecalho = new MutationObserver(function(mutations) {
+		function f_cor_cabecalho(){
 			cor_cabecalho.style.backgroundColor = '#4CAF50';
+		}
+		cor_cabecalho()
+		const m_cabecalho = new MutationObserver(function(mutations) {
+			f_cor_cabecalho();
 		});
 
 		m_cabecalho.observe(cor_cabecalho, { characterData: true });		

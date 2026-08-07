@@ -1,22 +1,8 @@
 (function() {
     'use strict';
-
-      const disponivel = document.getElementById('vDISPONIVEL');
-
-    disponivel.style.width = '550px';
-	disponivel.style.height = '400px';
-
-	const selecionado = document.getElementById('vSELECIONADO');
-
-    selecionado.style.width = '550px';
-	selecionado.style.height = '400px';
-
+	//cabeçalho
 	const cor_cabecalho = document.getElementById('ext-comp-1002');
 	if (cor_cabecalho) {
-		cor_cabecalho.style.height = '34px';
-		cor_cabecalho.style.left = '0px';
-		cor_cabecalho.style.top = '0px';
-		cor_cabecalho.style.width = '301px';
 		cor_cabecalho.style.backgroundColor = '#4CAF50';
 	}
 
@@ -38,7 +24,19 @@
 		});
 
 		c.observe(tela_inicial, { childList: true, subtree: true });
-	}
+	}	
+	
+	//filtro seleção
+	const disponivel = document.getElementById('vDISPONIVEL');
+
+    disponivel.style.width = '550px';
+	disponivel.style.height = '400px';
+
+	const selecionado = document.getElementById('vSELECIONADO');
+
+    selecionado.style.width = '550px';
+	selecionado.style.height = '3500px';
+
 
 	if (selecionado) {
 		function aplicarCor(elemento, cor) {
@@ -49,8 +47,8 @@
 
 
 		// Aplica inicialmente
-		const cor_selecionado = '#0662a1' //#d7eaf5'
-		const cor_disponivel = '#f9fad4'
+		const cor_selecionado = '#d9edfa' //#d7eaf5'
+		const cor_disponivel = '#f5f4eb'
 
 		aplicarCor(selecionado, cor_selecionado);
 		aplicarCor(disponivel, cor_disponivel);

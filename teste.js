@@ -2,7 +2,8 @@
     'use strict';
 
     const disponivel = document.getElementById('vDISPONIVEL');
-
+	const tela_selecao = document.getElementById('gxp0_c');
+	
     disponivel.style.width = '550px';
 	disponivel.style.height = '400px';
 
@@ -22,6 +23,9 @@
 
 	const tela_inicial = document.getElementById('W0038TABLEFILTRO');
 
+	if (tela_selecao){
+		tela_selecao.style.width = '2000px';
+	}
 	if (tela_inicial) {
 		function cor(){
 			tela_inicial.style.backgroundColor += '#4CAF50';
@@ -46,7 +50,6 @@
 				filho.style.backgroundColor = cor;
 			}
 		}
-
 
 		// Aplica inicialmente
 		const cor_selecionado = '#0662a1' //#d7eaf5'

@@ -38,7 +38,7 @@
     // 4. Aplica cores nas listas
     if (selecionado || disponivel) {
         const cor_selecionado = '#d7eaf5';
-        const cor_disponivel = '#f9fad4';
+        const cor_disponivel = '#0662a1'; //#f9fad4'
 
         function aplicarCorListas() {
             if (selecionado) {

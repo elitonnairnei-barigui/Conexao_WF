@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AjustarJanelaWF
 // @namespace    https://github.com/elitonnairnei-bairgui/meus-interagir_wf-script.user.js
-// @version      1.0.0
+// @version      1.0.1
 // @description  Adiciona um contador de cliques no canto da página
 // @author       Eliton
 // @match        https://wf.grupobarigui.com.br/*

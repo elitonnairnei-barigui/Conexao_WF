@@ -10,10 +10,10 @@
 
 	if (tela_inicial) {
 		function cor(){
-			tela_inicial.style.backgroundColor += '#4CAF50';
+			tela_inicial.style.backgroundColor += '#87a1cc';
 			for (const filho of tela_inicial.children){
-				//filho.style.backgroundColor += '#4CAF50';
-				filho.style.cssText += 'background-color: #4CAF50 !important;';
+				//filho.style.backgroundColor += '#87a1cc';
+				filho.style.cssText += 'background-color: '#87a1cc' !important;';
 			}
 		}
 

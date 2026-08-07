@@ -13,7 +13,7 @@
 			tela_inicial.style.backgroundColor += '#87a1cc';
 			for (const filho of tela_inicial.children){
 				//filho.style.backgroundColor += '#87a1cc';
-				filho.style.cssText += 'background-color: '#87a1cc' !important;';
+				filho.style.cssText += 'background-color: #87a1cc !important;';
 			}
 		}
 

@@ -49,7 +49,7 @@ window.addEventListener('load',function() {
 
 
 		// Aplica inicialmente
-		const cor_selecionado = '#d7eaf7' //5
+		const cor_selecionado = '#0662a1' //#d7eaf5'
 		const cor_disponivel = '#f9fad4'
 
 		aplicarCor(selecionado, cor_selecionado);

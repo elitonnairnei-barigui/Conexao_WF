@@ -59,8 +59,8 @@
 			    </select>`;
 			linha.insertAdjacentHTML('beforeend', `<td>${novoEmpresaCNPJ}</td>`);
 			///////////////////////////////////////////////////////////////
-			const tabela = `<https://wf.grupobarigui.com.br/wp_empresacontrato.aspx>`
-			console.log('teste Eliton')
+			const tabela = '<https://wf.grupobarigui.com.br/wp_empresacontrato.aspx>'
+			console.log('teste Eliton........')
 			console.log(tabela)
 			//linha.insertAdjacentHTM(
 			
